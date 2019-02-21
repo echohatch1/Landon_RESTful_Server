@@ -1,8 +1,10 @@
-var express = require('express'),
+const express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
   mongoose = require('mongoose'),
-  Product = require('./api/models/products.model'), //created model loading here
+  Product = require('./api/models/products.model'), //created Product model loading here
+  People = require('./api/models/people.model'), //created People model loading here
+  Place = require('./api/models/places.model'), //created Place model loading here
   bodyParser = require('body-parser');
 
   
@@ -17,8 +19,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var productRoute = require('./api/routes/products.routes'); //importing route
+const productRoute = require('./api/routes/products.routes'); //importing route
 productRoute(app); //register the route
+
+const peopleRoute = require('./api/routes/people.routes'); //importing route
+peopleRoute(app); //register the route
+
+const placeRoute = require('./api/routes/places.routes'); //importing route
+placeRoute(app); //register the route
 
 app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})

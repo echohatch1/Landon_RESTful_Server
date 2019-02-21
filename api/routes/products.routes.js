@@ -1,6 +1,6 @@
 'use strict';
 module.exports = function(app) {
-  var products = require('../controllers/products.controller');
+  const products = require('../controllers/products.controller');
 
   // Products Routes
   app.route('/products')

@@ -1,12 +1,12 @@
 'use strict';
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 
-var ProductsSchema = new Schema({
+const ProductsSchema = new Schema({
     name: { type: String, required: true, max: 100 },
-    price: {type: Number, required: true},
-    desc: {type: String, required: true},
+    price: {type: Number, required: false},
+    desc: {type: String, required: false},
 });
 
 module.exports = mongoose.model('Products', ProductsSchema)
