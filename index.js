@@ -9,15 +9,16 @@ var express = require('express'),
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://echohatch1:dbpassword@crudserver-d95jz.mongodb.net/test?retryWrites=true', { useNewUrlParser: true });
+mongoose.connect('mongodb+srv://echohatch1:dbpassword@crudserver-d95jz.mongodb.net/test?retryWrites=true', 
+{ useNewUrlParser: true });
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-var routes = require('./api/routes/products.routes'); //importing route
-routes(app); //register the route
+var productRoute = require('./api/routes/products.routes'); //importing route
+productRoute(app); //register the route
 
 app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
