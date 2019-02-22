@@ -4,9 +4,12 @@ API URL:
 https://shrouded-hollows-45616.herokuapp.com
 
 End Points:
-/products/
-/places/
-/people/
+
+/products
+
+/places
+
+/people
 
 Methods:
 GET | POST | PUT | DELETE
@@ -14,7 +17,7 @@ GET | POST | PUT | DELETE
 Exanples:
 
 Get all data (GET)
-https://shrouded-hollows-45616.herokuapp.com/products/
+https://shrouded-hollows-45616.herokuapp.com/products
 
 ---------------------------------------------------------
 
