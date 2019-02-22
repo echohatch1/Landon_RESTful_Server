@@ -5,14 +5,17 @@ https://shrouded-hollows-45616.herokuapp.com
 
 End Points:
 
+
 /products
 
 /places
 
 /people
 
+
 Methods:
 GET | POST | PUT | DELETE
+
 
 Exanples:
 
