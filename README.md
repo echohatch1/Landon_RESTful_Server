@@ -18,7 +18,7 @@ https://shrouded-hollows-45616.herokuapp.com
 GET | POST | PUT | DELETE
 
 
-## Exanples Calls ##
+## Examples Calls ##
 
 #### Get all data (GET) ####
 https://shrouded-hollows-45616.herokuapp.com/products
