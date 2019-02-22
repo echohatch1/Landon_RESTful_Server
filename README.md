@@ -1,13 +1,13 @@
-#Landon's RESTful Server#
+# Landon's RESTful Server #
 
 --------------------------------
 
-##API URL##
+## API URL ##
 https://shrouded-hollows-45616.herokuapp.com
 
 ---------------------------------
 
-##End Points##
+## End Points ##
 
 /products
 
@@ -17,12 +17,12 @@ https://shrouded-hollows-45616.herokuapp.com
 
 -----------------------------------------------
 
-##Methods##
+## Methods ##
 GET | POST | PUT | DELETE
 
 ----------------------------------------
 
-##Exanples Calls##
+## Exanples Calls ##
 
 Get all data (GET)
 https://shrouded-hollows-45616.herokuapp.com/products
@@ -63,7 +63,7 @@ https://shrouded-hollows-45616.herokuapp.com/products/5c6f25229fc1df41845fb447
 
 ----------------------------------------------------------------------------
 
-##Data Models##
+## Data Models ##
 
 Products:
 
