@@ -1,11 +1,9 @@
 # Landon's RESTful Server #
 
---------------------------------
 
 ## API URL ##
 https://shrouded-hollows-45616.herokuapp.com
 
----------------------------------
 
 ## End Points ##
 
@@ -15,21 +13,18 @@ https://shrouded-hollows-45616.herokuapp.com
 
 /people
 
------------------------------------------------
 
 ## Methods ##
 GET | POST | PUT | DELETE
 
-----------------------------------------
 
 ## Exanples Calls ##
 
-Get all data (GET)
+#### Get all data (GET) ####
 https://shrouded-hollows-45616.herokuapp.com/products
 
----------------------------------------------------------
 
-Create an entry (POST)
+#### Create an entry (POST) ####
 https://shrouded-hollows-45616.herokuapp.com/products
 
 Model:
@@ -39,14 +34,12 @@ Model:
 	"desc": "We got beats"
 }
 
------------------------------------------------------------------
 
-Get a single data object using its ID (GET)
+#### Get a single data object using its ID (GET) ####
 https://shrouded-hollows-45616.herokuapp.com/products/5c6e063435b6501718e0dbc0
 
--------------------------------------------------------------------
 
-Update a single data oject using its ID (PUT)
+#### Update a single data oject using its ID (PUT) ####
 https://shrouded-hollows-45616.herokuapp.com/products/5c6e063435b6501718e0dbc0
 
 Model:
@@ -56,12 +49,10 @@ Model:
 	"desc": "Break me off a peice!"
 }
 
-----------------------------------------------------------------------
 
-Delete a single data object using its ID (DELETE)
+#### Delete a single data object using its ID (DELETE) ####
 https://shrouded-hollows-45616.herokuapp.com/products/5c6f25229fc1df41845fb447
 
-----------------------------------------------------------------------------
 
 ## Data Models ##
 
