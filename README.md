@@ -1,7 +1,11 @@
 Landon's RESTful Server
 
+--------------------------------
+
 API URL:
 https://shrouded-hollows-45616.herokuapp.com
+
+---------------------------------
 
 End Points:
 
@@ -12,10 +16,12 @@ End Points:
 
 /people
 
+-----------------------------------------------
 
 Methods:
 GET | POST | PUT | DELETE
 
+----------------------------------------
 
 Exanples:
 
