@@ -1,4 +1,4 @@
-# Landon's RESTful Server #
+# Landon's RESTful CRUD Server #
 
 
 ## API URL ##
@@ -9,9 +9,9 @@ https://shrouded-hollows-45616.herokuapp.com
 
 /products
 
-/products/id/<product id here>
+/products/id/
 
-/products/name/<product name here>
+/products/name/
 
 
 ## Methods ##
