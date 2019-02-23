@@ -19,6 +19,7 @@ exports.create_a_product = function(req, res) {
   new_product.save(function(err, product) {
     if (err)
       res.send(err);
+      res.json({ message: 'Product successfully created' });
     res.json(product);
   });
 };
@@ -46,6 +47,7 @@ exports.update_a_product = function(req, res) {
     Product.findOneAndUpdate({_id: req.params.productId}, req.body, {new: true}, function(err, product) {
     if (err)
       res.send(err);
+      res.json({ message: 'Product successfully updated' });
     res.json(product);
   });
 };
