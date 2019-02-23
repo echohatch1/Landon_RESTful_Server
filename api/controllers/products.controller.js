@@ -32,6 +32,14 @@ exports.read_a_product = function(req, res) {
   });
 };
 
+exports.read_a_product_name = function(req, res) {
+    Product.findOne( { name: req.params.productName }, function(err, product) {
+    if (err)
+      res.send(err);
+    res.json(product);
+  });
+};
+
 
 
 exports.update_a_product = function(req, res) {

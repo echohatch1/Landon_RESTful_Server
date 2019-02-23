@@ -12,4 +12,7 @@ module.exports = function(app) {
     .get(products.read_a_product)
     .put(products.update_a_product)
     .delete(products.delete_a_product);
+
+  app.route('/products/:productName')
+    .get(products.read_a_product_name)
 };
