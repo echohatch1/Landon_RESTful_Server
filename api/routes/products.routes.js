@@ -8,7 +8,7 @@ module.exports = function(app) {
     .post(products.create_a_product);
 
 
-  app.route('/products/:productId')
+  app.route('/products/id/:productId')
     .get(products.read_a_product)
     .put(products.update_a_product)
     .delete(products.delete_a_product);
