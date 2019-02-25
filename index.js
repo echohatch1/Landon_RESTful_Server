@@ -20,6 +20,9 @@ app.use(bodyParser.json());
 const productRoute = require('./api/routes/products.routes'); //importing route
 productRoute(app); //register the route
 
+app.get('/', (req, res) => {
+  res.send("<h1>Welcome to my products API</h1>")
+});
 
 app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
