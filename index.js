@@ -24,9 +24,16 @@ app.get('/', (req, res) => {
   res.send("<h1>Welcome to my products API</h1>")
 });
 
-app.use(function(req, res) {
+/*app.use(function(req, res) {
     res.status(404).send({url: req.originalUrl + ' not found'})
-  });
+  });*/
+
+app.use((req, res, next) => {
+    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+    next()
+})
 
 app.listen(port);
 
