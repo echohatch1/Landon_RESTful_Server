@@ -1,7 +1,9 @@
 const express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
-  mongoURL = process.env.MONGO_URL;
+  // mongoURL = process.env.MONGO_URL;
+  // mongoURL = "mongodb://echohatch1:NxixcNRvehJVsEY6@cluster0.lgu6nng.mongodb.net/Products?retryWrites=true&w=majority&appName=Cluster0";
+  mongoURL = "mongodb+srv://echohatch1:NxixcNRvehJVsEY6@cluster0.lgu6nng.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
   mongoose = require('mongoose'),
   Product = require('./api/models/products.model'), //created Product model loading here
   bodyParser = require('body-parser');
@@ -20,7 +22,7 @@ app.use(function(req, res, next) {
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(mongoURL);
 
 const productRoute = require('./api/routes/products.routes'); //importing route
 productRoute(app); //register the route
