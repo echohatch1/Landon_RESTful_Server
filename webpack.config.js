@@ -1,30 +1,25 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production', // Set mode to production for optimizations
-  entry: './index.js', // Entry point of your application
+  mode: 'production', // Maintain production mode for optimizations
+  target: 'node', // Explicitly target Node.js environment
+  entry: './index.js', // Keep the Node.js entry point
   output: {
-    filename: 'main.bundle.js', // Output filename for bundled code
-    path: path.resolve(__dirname, 'dist'), // Output directory for bundled files
+    filename: 'main.bundle.js', // Consistent output filename
+    path: path.resolve(__dirname, 'dist'), // Retain output directory
   },
   module: {
     rules: [
       {
-        test: /\.js$/, // Target all JavaScript files
-        exclude: /node_modules/, // Exclude node_modules directory
+        test: /\.js$/, // Target JavaScript files
+        exclude: /node_modules/, // Exclude node_modules
         use: {
-          loader: 'babel-loader', // Use Babel loader for potential transpilation
+          loader: 'babel-loader', // Continue with Babel transpilation if needed
           options: {
-            // Add any necessary Babel presets or plugins based on your project requirements
+            // Define necessary Babel presets or plugins (if any)
           }
         }
       },
-      {
-        test: /body-parser\.js/, // Target body-parser specifically (if necessary)
-        use: {
-          loader: 'body-parser-webpack-loader'
-        }
-      }
     ]
   }
 };
