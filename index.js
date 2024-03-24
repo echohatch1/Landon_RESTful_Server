@@ -1,9 +1,7 @@
 const express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
-  // mongoURL = process.env.MONGO_URL;
-  // mongoURL = "mongodb://echohatch1:NxixcNRvehJVsEY6@cluster0.lgu6nng.mongodb.net/Products?retryWrites=true&w=majority&appName=Cluster0";
-  mongoURL = "mongodb+srv://echohatch1:NxixcNRvehJVsEY6@cluster0.lgu6nng.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+  mongoURL = process.env.MONGO_URL;
   mongoose = require('mongoose'),
   Product = require('./api/models/products.model'), //created Product model loading here
   bodyParser = require('body-parser');
