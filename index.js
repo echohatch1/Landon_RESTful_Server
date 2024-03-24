@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect(mongoURL, { useNewUrlParser: true });
+mongoose.connect(mongoURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const productRoute = require('./api/routes/products.routes'); //importing route
 productRoute(app); //register the route
