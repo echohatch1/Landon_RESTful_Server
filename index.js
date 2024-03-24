@@ -1,7 +1,7 @@
 const express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
-  mongodbPassword = process.env.MONGO_PASSWORD;
+  mongoURL = process.env.MONGO_URL;
   mongoose = require('mongoose'),
   Product = require('./api/models/products.model'), //created Product model loading here
   bodyParser = require('body-parser');
@@ -20,7 +20,7 @@ app.use(function(req, res, next) {
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://echohatch1:${process.env.MONGODB_PASSWORD}@cluster0.lgu6nng.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0');
+mongoose.connect(mongoURL, { useNewUrlParser: true });
 
 const productRoute = require('./api/routes/products.routes'); //importing route
 productRoute(app); //register the route
