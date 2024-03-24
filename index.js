@@ -1,6 +1,7 @@
 const express = require('express'),
   app = express(),
   port = process.env.PORT || 3000,
+  mongodbPassword = process.env.MONGO_PASSWORD;
   mongoose = require('mongoose'),
   Product = require('./api/models/products.model'), //created Product model loading here
   bodyParser = require('body-parser');
@@ -19,7 +20,7 @@ app.use(function(req, res, next) {
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://echohatch1:Rn1qwN1Of7NJ8pZp@cluster0.lgu6nng.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
+mongoose.connect('mongodb+srv://echohatch1:${mongodbPassword}@cluster0.lgu6nng.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
 { useNewUrlParser: true });
 
 
