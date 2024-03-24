@@ -20,8 +20,7 @@ app.use(function(req, res, next) {
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb+srv://echohatch1:${mongodbPassword}@cluster0.lgu6nng.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', 
-{ useNewUrlParser: true });
+mongoose.connect('mongodb://mongodb+srv://echohatch1:${mongodbPassword}@cluster0.lgu6nng.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0');
 
 
 const productRoute = require('./api/routes/products.routes'); //importing route
